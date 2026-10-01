@@ -1,6 +1,6 @@
 # Workflow Versioning Concepts
 
-This document provides core conceptual explanations of workflow versioning in Temporal. For language-specific implementation details see `references/{your_language}/versioning.md`, for the language you are working in.
+This document provides core conceptual explanations of workflow versioning in Temporal. For language-specific implementation details see `references/php/versioning.md`.
 
 ## Overview
 

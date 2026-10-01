@@ -1,6 +1,6 @@
 ---
 name: temporal-developer
-description: This skill should be used when the user asks to "create a Temporal workflow", "write a Temporal activity", "debug stuck workflow", "fix non-determinism error", "Temporal Python", "Temporal TypeScript", "Temporal PHP", "workflow replay", "activity timeout", "signal workflow", "query workflow", "worker not starting", "activity keeps retrying", "Temporal heartbeat", "continue-as-new", "child workflow", "saga pattern", "workflow versioning", "durable execution", "reliable distributed systems", or mentions Temporal SDK development.
+description: This skill should be used when the user asks to "create a Temporal workflow", "write a Temporal activity", "debug stuck workflow", "fix non-determinism error", "Temporal PHP", "workflow replay", "activity timeout", "signal workflow", "query workflow", "worker not starting", "activity keeps retrying", "Temporal heartbeat", "continue-as-new", "child workflow", "saga pattern", "workflow versioning", "durable execution", "reliable distributed systems", or mentions Temporal SDK development.
 version: 1.0.0
 ---
 
@@ -8,7 +8,7 @@ version: 1.0.0
 
 ## Overview
 
-Temporal is a durable execution platform that makes workflows survive failures automatically. This skill provides guidance for building Temporal applications in Python, TypeScript, and PHP.
+Temporal is a durable execution platform that makes workflows survive failures automatically. This skill provides guidance for building Temporal applications in PHP.
 
 ## Core Architecture
 
@@ -89,32 +89,28 @@ Once you've downloaded the file, extract the downloaded archive and add the temp
 
 ### Read All Relevant References
 
-1. First, read the getting started guide for the language you are working in:
-    - Python -> read `references/python/python.md`
-    - TypeScript -> read `references/typescript/typescript.md`
-    - PHP -> read `references/php/php.md`
-2. Second, read appropriate `core` and language-specific references for the task at hand.
+1. First, read the getting started guide: `references/php/php.md`
+2. Second, read appropriate `core` and PHP references for the task at hand.
 
 
 ## Primary References
 - **`references/core/determinism.md`** - Why determinism matters, replay mechanics, basic concepts of activities
-    + Language-specific info at `references/{your_language}/determinism.md`
+    + PHP info at `references/php/determinism.md`
 - **`references/core/patterns.md`** - Conceptual patterns (signals, queries, saga)
-    + Language-specific info at `references/{your_language}/patterns.md`
+    + PHP info at `references/php/patterns.md`
 - **`references/core/gotchas.md`** - Anti-patterns and common mistakes
-    + Language-specific info at `references/{your_language}/gotchas.md`
+    + PHP info at `references/php/gotchas.md`
 - **`references/core/versioning.md`** - Versioning strategies and concepts - how to safely change workflow code while workflows are running
-    + Language-specific info at `references/{your_language}/versioning.md`
+    + PHP info at `references/php/versioning.md`
 - **`references/core/troubleshooting.md`** - Decision trees, recovery procedures
 - **`references/core/error-reference.md`** - Common error types, workflow status reference
 - **`references/core/interactive-workflows.md`** - Testing signals, updates, queries
 - **`references/core/dev-management.md`** - Dev cycle & management of server and workers
 - **`references/core/ai-patterns.md`** - AI/LLM pattern concepts
-    + Language-specific info at `references/{your_language}/ai-patterns.md`, if available. Currently Python only.
 
 ## Additional Topics
-- **`references/{your_language}/observability.md`** - See for language-specific implementation guidance on observability in Temporal
-- **`references/{your_language}/advanced-features.md`** - See for language-specific guidance on advanced Temporal features and language-specific features
+- **`references/php/observability.md`** - Observability in Temporal with the PHP SDK
+- **`references/php/advanced-features.md`** - Advanced Temporal and PHP SDK features
 
 
 ## Feedback

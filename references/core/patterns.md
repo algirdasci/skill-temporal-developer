@@ -2,10 +2,10 @@
 
 ## Overview
 
-Common patterns for building robust Temporal workflows. 
-See the language-specific references for the language you are working in:
-- `references/{language}/{language}.md` for the root level documentation for that language
-- `references/{language}/patterns.md` for language-specific example code of the patterns in this file.
+Common patterns for building robust Temporal workflows.
+See the PHP-specific references:
+- `references/php/php.md` for PHP SDK documentation
+- `references/php/patterns.md` for PHP example code of the patterns in this file.
 
 ## Signals
 
@@ -34,7 +34,7 @@ Client                    Workflow
 ```
 
 **Note:** A related but distinct pattern to signals is async activity completion. This is an advanced feature, which you may consider if the external system that would deliver the signal is unreliable and might fail to Signal, or
-you want the external process to Heartbeat or receive Cancellation. If this may be the case, look at language-specific advanced features for your SDK language (`references/{your_language}/advanced-features.md`).
+you want the external process to Heartbeat or receive Cancellation. If this may be the case, see PHP advanced features (`references/php/advanced-features.md`).
 
 ## Queries
 

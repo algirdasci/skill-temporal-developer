@@ -1,26 +1,45 @@
-# Temporal Development Skill
+# Temporal PHP Developer Skill
 
-A comprehensive skill for building Temporal applications.
+A coding-agent skill for building Temporal applications with the **PHP SDK**.
+Forked from [temporalio/skill-temporal-developer](https://github.com/temporalio/skill-temporal-developer) (PR [#40](https://github.com/temporalio/skill-temporal-developer/pull/40)), trimmed to PHP only.
 
 ## Installation
 
-### As a Claude Code Plugin
+### Any agent (via `npx skills`)
 
-1. Run `/plugin marketplace add temporalio/agent-skills` 
-2. Run `/plugin` to open the plugin manager
-3. Select **Marketplaces**
-4. Choose `temporal-marketplace` from the list
-5. Select **Enable auto-update** or **Disable auto-update**
-6. run `/plugin install temporal-developer@temporalio-agent-skills` 
-7. Restart Claude Code
+```bash
+npx skills add algirdasci/skill-temporal-developer
+```
 
-### Via `npx skills` - supports all major coding agents
+Follow the prompts to pick your agent and scope.
 
-1. `npx skills add temporalio/skill-temporal-developer`
-2. Follow prompts
+### Manual (agent-agnostic)
 
-### Via manually cloning the skill repo:
+Clone into your agent's skills directory:
 
-1. `mkdir -p ~/.claude/skills && git clone https://github.com/temporalio/skill-temporal-developer ~/.claude/skills/temporal-developer`
+```bash
+# Claude Code
+git clone https://github.com/algirdasci/skill-temporal-developer ~/.claude/skills/temporal-php-developer
 
-Appropriately adjust the installation directory based on your coding agent.
+# pi
+git clone https://github.com/algirdasci/skill-temporal-developer ~/.pi/agent/skills/temporal-php-developer
+
+# Project-scoped (any agent that reads .agent/skills or similar)
+git clone https://github.com/algirdasci/skill-temporal-developer .agent/skills/temporal-php-developer
+```
+
+Adjust the directory to your agent's convention — the repo is a standard skill: `SKILL.md` at the root plus `references/`.
+
+## What's inside
+
+- `SKILL.md` — entry point: architecture, determinism, CLI setup
+- `references/core/` — language-agnostic concepts (patterns, gotchas, versioning, troubleshooting, errors)
+- `references/php/` — PHP SDK guides (setup, testing, patterns, observability, error handling, data handling, versioning)
+
+## Syncing with upstream
+
+```bash
+git remote add upstream https://github.com/temporalio/skill-temporal-developer.git
+git fetch upstream
+git merge upstream/feature/add-php-support   # or upstream/main once PR #40 is merged
+```

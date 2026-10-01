@@ -1,6 +1,6 @@
 # Determinism in Temporal Workflows
 
-This document provides a conceptual-level overview to determinism in Temporal. Additional language-specific determinism information is available at `references/{your_language}/determinism.md`.
+This document provides a conceptual-level overview to determinism in Temporal. Additional language-specific determinism information is available at `references/php/determinism.md`.
 
 ## Overview
 
@@ -71,15 +71,13 @@ Result: Commands don't match history → NondeterminismError
 
 ## **Central Concept**: Place Non-Determinism within Activities
 
-In Temporal, activities are the primary mechanism for making non-deterministic code durable and persisted in workflow history. Generally speaking, you should place sources of non-determinism in activities, which provides durability and recording of results, as well as automated retries and more. See `references/{your_language}/{your_language}.md` for the language you are working in for how to do this in practice.
+In Temporal, activities are the primary mechanism for making non-deterministic code durable and persisted in workflow history. Generally speaking, you should place sources of non-determinism in activities, which provides durability and recording of results, as well as automated retries and more. See `references/php/php.md` for how to do this in practice.
 
-For a few simple cases, like timestamps, random values, UUIDs, etc. the Temporal SDK in your language may provide durable variants that are simple to use. See `references/{your_language}/determinism.md` for the language you are working in for more info.
+For a few simple cases, like timestamps, random values, UUIDs, etc. the Temporal SDK in your language may provide durable variants that are simple to use. See `references/php/determinism.md` for PHP-specific details.
 
 ## SDK Protection Mechanisms
 Each Temporal SDK language provides a protection mechanism to make it easier to catch non-determinism errors earlier in development:
 
-- Python: The Python SDK runs workflows in a sandbox that intercepts and aborts non-deterministic calls at runtime.
-- TypeScript: The TypeScript SDK runs workflows in an isolated V8 sandbox, intercepting many common sources of non-determinism and replacing them automatically with deterministic variants.
 - PHP: The PHP SDK performs runtime checks that detect adding, removing, or reordering of commands (activity calls, timers, child workflows, etc.). It does NOT have a sandbox — developers must be disciplined about avoiding non-deterministic operations in workflow code.
 
 
@@ -91,7 +89,7 @@ Each Temporal SDK language provides a protection mechanism to make it easier to 
 
 ### Testing with Replay
 
-Replay tests verify that workflows follow identical code paths when re-run, by attempting to replay recorded executions. See the replay testing section of `references/{your_language}/testing.md` for information on how to write these tests.
+Replay tests verify that workflows follow identical code paths when re-run, by attempting to replay recorded executions. See the replay testing section of `references/php/testing.md` for information on how to write these tests.
 
 ## Recovery from Non-Determinism
 

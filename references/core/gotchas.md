@@ -2,7 +2,7 @@
 
 Common mistakes and anti-patterns in Temporal development. Learning from these saves significant debugging time.
 
-This document provides a general overview of conceptual-level gotchas in Temporal. The exact form that these take and symptoms can vary by SDK language. See `references/{your_language}/gotchas.md` for language-specific info on common mistakes.
+This document provides a general overview of conceptual-level gotchas in Temporal. The exact form that these take and symptoms can vary by SDK language. See `references/php/gotchas.md` for language-specific info on common mistakes.
 
 ## Non-Idempotent Activities
 
